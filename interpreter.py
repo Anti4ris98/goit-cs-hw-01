@@ -158,7 +158,7 @@ class Parser:
         """Парсер для арифметичних виразів з підтримкою нової ієрархії операцій."""
         node = self.term()
 
-        while self.current_token.type in (TokenType.PLUS, TokenType.MINUS, TokenType.MUL, TokenType.DIV):
+        while self.current_token.type in (TokenType.PLUS, TokenType.MINUS):
             token = self.current_token
             self.eat(token.type)
 
